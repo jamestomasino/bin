@@ -2,4 +2,6 @@
 
 To link:
 
-    ln -s . ~/bin
+From cloned git repo folder:
+
+    ln -s `pwd` ~/bin
