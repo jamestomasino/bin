@@ -1,5 +1,7 @@
 ## bin scripts intended for ~/bin
 
-To link:
+### Install ###
 
-    ln -s . ~/bin
+From cloned git repo folder:
+
+    ln -s `pwd` ~/bin
