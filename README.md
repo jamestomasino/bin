@@ -1,6 +1,6 @@
 ## bin scripts intended for ~/bin
 
-To link:
+### Install ###
 
 From cloned git repo folder:
 
