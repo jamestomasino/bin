@@ -175,5 +175,4 @@ function get_icon {
 
 icon="$(get_icon $sky)"
 output="$icon$temperature$scale"
-output="$output\033[0m"
 echo -e "$output"
