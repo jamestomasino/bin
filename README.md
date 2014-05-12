@@ -2,11 +2,10 @@
 
 ### Dependencies ###
 
-`safe-reattach-to-user-namespace` requires `attach-to-user-namespace`
-
-    $ brew install attach-to-user-namespace
-    
-`weather` requires `jq` - [jq](http://stedolan.github.io/jq/)
+- safe-reattach-to-user-namespace requires `attach-to-user-namespace` 
+    - brew install attach-to-user-namespace
+- weather requires `jq` 
+    - [jq](http://stedolan.github.io/jq/)
 
 ### Install ###
 
