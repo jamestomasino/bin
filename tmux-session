@@ -5,7 +5,7 @@ set -e
 
 dump() {
   local d=$'\t'
-  tmux list-windows -a -F "#S${d}#W${d}#{pane_current_path}"
+  /usr/local/bin/tmux list-windows -a -F "#S${d}#W${d}#{pane_current_path}"
 }
 
 save() {
@@ -17,20 +17,20 @@ terminal_size() {
 }
 
 session_exists() {
-  tmux has-session -t "$1" 2>/dev/null
+  /usr/local/bin/tmux has-session -t "$1" 2>/dev/null
 }
 
 add_window() {
-  tmux new-window -d -t "$1:" -n "$2" -c "$3"
+  /usr/local/bin/tmux new-window -d -t "$1:" -n "$2" -c "$3"
 }
 
 new_session() {
   cd "$3" &&
-  tmux new-session -d -s "$1" -n "$2" $4
+  /usr/local/bin/tmux new-session -d -s "$1" -n "$2" $4
 }
 
 restore() {
-  tmux start-server
+  /usr/local/bin/tmux start-server
   local count=0
   local dimensions="$(terminal_size)"
 
