@@ -9,8 +9,8 @@ usage() {
 #######################
 # Config Variables
 max_backups=12
-ignore_session_list="hosts"
-backup_dir=~/.resurrect/tmux_snapshot
+ignore_session_list=""
+backup_dir=~/.tmuxres
 export PATH="${PATH}:/usr/local/bin"
 
 #######################
