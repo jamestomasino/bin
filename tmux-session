@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source $HOME/.environment
-
 set -e
 
 dump() {
