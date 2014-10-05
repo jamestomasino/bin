@@ -80,6 +80,11 @@ thunderstorm="\xe2\x9a\xa1"
 
 ###[ Fetch Weather data ]######################################################
 
+# Fix for Iceland
+if [ $location="null,IS" ];
+then
+	location="REYKYAVIK,IS"
+fi
 weather=$(curl -s "http://api.openweathermap.org/data/2.5/weather?q=$location&units=$units")
 
 if [ -z "$weather" ]
