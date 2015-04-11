@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# This will record a vim session with no .vimrc and create vim.gif.
+# The scripts are designed to run on default sized term window.
+# The cropping is sized for iTerm, so you may need to tweak it.
+#
+# Dependencies
+# brew (or apt-get) install ttyrec imagemagick
+# ttygif - https://github.com/sugyan/ttygif/releases
+ttyrec -e "vim -u NONE"
+ttygif
+convert tty.gif -coalesce -repage 0x0 -crop 570x354+0+22 +repage vim.gif
+rm tty.gif
+rm ttyrecord
