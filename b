@@ -5,7 +5,7 @@
 [ $(uname) = Darwin ] || exit 1
 which fzf > /dev/null 2>&1 || brew reinstall --HEAD fzf || exit 1
 
-/usr/bin/ruby -x "$0"                    |
+ruby -x "$0"                    |
   fzf-tmux -u 30% --ansi --multi         |
   awk 'BEGIN { FS = "\t" } { print $2 }' |
   xargs open
