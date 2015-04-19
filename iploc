@@ -7,7 +7,8 @@ then
 	echo -e "\njq binary is not found, please download it from http://stedolan.github.io/jq/ and put it in your PATH"
 	exit 255
 fi
-ip=$(dig +short myip.opendns.com @resolver1.opendns.com)
+ip=${1:-$(dig +short myip.opendns.com @resolver1.opendns.com)}
+#ip=$(dig +short myip.opendns.com @resolver1.opendns.com)
 geo_locate_api="http://ipinfo.io/$ip"
 geo_data=$($fetch_cmd $geo_locate_api)
 city=$(echo $geo_data | jq -r '.city')
