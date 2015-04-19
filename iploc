@@ -16,6 +16,6 @@ country=$(echo $geo_data | jq -r '.country')
 location=$city,$country
 
 if [ "$location" == "null,IS" ]; then
-	location="REYKYAVIK,IS"
+	location="REYKYAVIK,IS" # Iceland has no cities in geo_location, so force
 fi
 echo $location
